@@ -1,0 +1,25 @@
+{% extends 'product/detail.html' %}
+{% block title %}Product{% endblock %}
+{%block product_active%} active {%endblock%}
+{% block body %}
+
+
+<div class="albums-container container-fluid">
+    <div class="row">
+        {% for product in category.product_set.all %}
+            <div class="col-sm-4 col-lg-2">
+                    <div class="thumbnail">
+                        <a href="{% url 'product:one-product' category_slug=category.category_slug product_slug=product.product_slug %}">
+
+                            <div class="caption">
+                                <h3>{{ product.name }}</h3>
+                                <h5><b>Price:</b> {{ product.price }}</h5>
+                                <h5><b>Description:</b> {{ product.description }}</h5>
+                            </div>
+                        </a>
+                    </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

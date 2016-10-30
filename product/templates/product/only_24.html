@@ -1,0 +1,24 @@
+{% extends 'product/detail.html' %}
+{% block title %}24 Hours products{% endblock %}
+{%block product_active%} active {%endblock%}
+{% block body %}
+
+<div class="albums-container container-fluid">
+    <div class="row">
+        {% for product in all_products %}
+            <div class="col-sm-4 col-lg-2">
+                    <div class="thumbnail">
+                            <div class="caption">
+                                <h3>{{ product.name }}</h3>
+                                <h5><b>Category: </b>{{product.category}}<br>
+                                    <b>Price:</b> {{ product.price }}<br>
+                                <b>Description:</b> {{ product.description }}<br>
+                                <b>Created At: </b>{{product.created_at}}<br>
+                                <b>Modified At: </b>{{product.modified_at}}<br></h5>
+                            </div>
+                    </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock%}

@@ -1,0 +1,12 @@
+{% extends 'product/detail.html' %}
+{% block title %}Only one product{% endblock %}
+{%block det_product_active%} active {%endblock%}
+{% block body %}
+<div class="albums-container container-fluid">
+    <div class="caption">
+        <h3>{{ product.name }}</h3>
+        <h5><b>Description:</b> {{ product.description }}</h5>
+        <h5><b>Price:</b> {{ product.price }}</h5>
+    </div>
+</div>
+{% endblock %}
