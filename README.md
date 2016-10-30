@@ -1,3 +1,3 @@
 # prod_list
-superuser name : admin
+superuser name : admin <br>
 superuser password : admin12345
